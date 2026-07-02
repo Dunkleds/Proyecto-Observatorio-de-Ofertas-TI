@@ -1,8 +1,9 @@
 requests
 pandas
 python-dotenv
-psycopg2-binary
-SQLAlchemy
 beautifulsoup4
 feedparser
+lxml
+psycopg2-binary
+SQLAlchemy
 jupyter
