@@ -6,3 +6,4 @@ SQLAlchemy
 beautifulsoup4
 feedparser
 jupyter
+# Ignorar
