@@ -10,6 +10,7 @@ WWR_RSS_URL = "https://weworkremotely.com/remote-jobs.rss"
 def fetch_wwr_rss_jobs() -> list[dict]:
     """
     Extrae trabajos de la fuente RSS de We Work Remotely.
+
     """
     feed = feedparser.parse(WWR_RSS_URL)
 
@@ -36,7 +37,7 @@ def fetch_wwr_rss_jobs() -> list[dict]:
 
 def save_raw_jobs(jobs: list[dict], source: str) -> Path:
     """
-    Guarda los trabajos extraidos en data/raw como JSON.
+    Guarda los trabajos en bruto en data/raw como JSON.
     """
     output_dir = Path("data/raw")
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -52,8 +53,8 @@ def save_raw_jobs(jobs: list[dict], source: str) -> Path:
 
 if __name__ == "__main__":
     jobs = fetch_wwr_rss_jobs()
-    output_path = save_raw_jobs(jobs, source="we_work_remotely_rss")
+    output_path = save_raw_jobs(jobs, source="we_work_remotely_rss_all")
 
-    print(f"Fuente: We Work Remotely RSS")
-    print(f"Trabajos extraidos: {len(jobs)}")
+    print("Fuente: We Work Remotely RSS")
+    print(f"Trabajos en bruto extraídos: {len(jobs)}")
     print(f"Guardado en: {output_path}")
