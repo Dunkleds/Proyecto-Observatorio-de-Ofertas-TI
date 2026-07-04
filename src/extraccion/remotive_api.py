@@ -1,5 +1,6 @@
 from datetime import datetime
 from pathlib import Path
+from unicodedata import category
 import requests
 import json
 
