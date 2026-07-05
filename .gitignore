@@ -1,12 +1,18 @@
+# Entornos y variables locales
 .env
 .venv/
 venv/
 __pycache__/
 *.pyc
 
+# Datos bronze/raw
 data/raw/*.json
 data/raw/*.csv
+
+# Datos procesados generados por el pipeline
 data/procesada/*.csv
 data/procesada/*.json
 data/procesada/silver/*.csv
 data/procesada/silver/*.json
+data/procesada/gold/*.csv
+data/procesada/gold/*.json
