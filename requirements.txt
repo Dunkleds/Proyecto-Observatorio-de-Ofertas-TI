@@ -6,4 +6,4 @@ feedparser
 lxml
 psycopg2-binary
 SQLAlchemy
-jupyter
+streamlit
