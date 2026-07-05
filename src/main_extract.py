@@ -1,19 +1,19 @@
-from extract.remotive_api import (
+from extraccion.remotive_api import (
     fetch_remotive_jobs,
     save_raw_jobs as save_remotive_jobs,
 )
 
-from extract.arbeitnow_api import (
+from extraccion.arbeitnow_api import (
     fetch_arbeitnow_jobs,
     save_raw_jobs as save_arbeitnow_jobs,
 )
 
-from extract.wwr_rss import (
+from extraccion.wwr_rss import (
     fetch_wwr_rss_jobs,
     save_raw_jobs as save_wwr_rss_jobs,
 )
 
-from extract.wwr_scraper import (
+from extraccion.wwr_scraper import (
     fetch_wwr_programming_jobs,
     save_raw_jobs as save_wwr_scraper_jobs,
 )
@@ -119,11 +119,10 @@ def run_bronze_extraction_pipeline() -> None:
     except Exception as error:
         print(f"Error extrayendo datos desde We Work Remotely Scraper: {error}")
 
-    print("\n==========================================")
     print("Etapa BRONZE finalizada")
     print(f"Total de ofertas crudas extraídas: {total_jobs}")
     print("Archivos guardados en: data/raw/")
-    print("==========================================")
+
 
 
 if __name__ == "__main__":

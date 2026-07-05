@@ -1,9 +1,12 @@
 .env
-__pycache__/
-*.pyc
 .venv/
 venv/
+__pycache__/
+*.pyc
+
 data/raw/*.json
 data/raw/*.csv
-data/processed/*.csv
-.ipynb_checkpoints/
+data/procesada/*.csv
+data/procesada/*.json
+data/procesada/silver/*.csv
+data/procesada/silver/*.json
